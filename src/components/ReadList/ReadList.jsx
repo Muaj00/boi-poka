@@ -1,6 +1,8 @@
 import React from 'react';
 import { CiLocationOn } from "react-icons/ci";
 import { Link } from 'react-router-dom';
+import { MdOutlineLibraryBooks } from "react-icons/md";
+import { BsPersonCheck } from "react-icons/bs";
 
 const ReadList = ({ readBooks }) => {
 
@@ -32,12 +34,12 @@ const ReadList = ({ readBooks }) => {
 
                 <div className='flex items-center gap-5'>
                     <span className='flex items-center gap-2'>
-                        <CiLocationOn className='text-lg' />
+                        <BsPersonCheck className='text-lg'/>
                         Publisher: {readBooks.publisher}
                     </span>
                     
                     <span className='flex items-center gap-2'>
-                        <CiLocationOn className='text-lg' />
+                        <MdOutlineLibraryBooks className='text-lg'/>
                         Total Pages: {readBooks.totalPages}
                     </span>
 

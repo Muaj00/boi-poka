@@ -34,7 +34,7 @@ const NavBar = () => {
                         {link}
                     </ul>
                 </div>
-                <a className=" text-3xl font-bold">Boi<span className="text-green-600">Poka</span></a>
+                <a className=" text-3xl font-bold"><span className="text-sky-800">Boi</span><span className="text-green-600">Poka</span></a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -42,7 +42,7 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Button</a>
+                <a className="btn btn-outline btn-success">Buy Now</a>
             </div>
         </div>
     );

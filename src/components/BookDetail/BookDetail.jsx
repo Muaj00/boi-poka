@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
+import { addToStoredList } from '../../Utilities/addToLocalDatabase';
 
 const BookDetail = () => {
 
@@ -9,10 +10,14 @@ const BookDetail = () => {
 
     const book = data.find(book => book.bookId === id)
     console.log(book);
+
+    const handleRead = (id) =>{
+        addToStoredList(id)
+    }
     return (
         <div className="hero min-h-screen">
             <div className="hero-content flex-col lg:flex-row">
-                <div className='bg-base-200 min-w-[500px] py-28 rounded-2xl'>
+                <div className='bg-base-200 min-w-[550px] py-36 rounded-2xl'>
                     <img
                         src={book.image}
                         className="max-w-72 rounded-lg shadow-2xl  mx-auto" />
@@ -23,10 +28,10 @@ const BookDetail = () => {
                     <div className="divider"></div>
                     <h3 className='text-green-600 bg-sky-200 px-4 py-2 rounded-xl w-20'>{book.category}</h3>
                     <div className="divider"></div>
-                    <p className="py-6"><span className='font-bold text-xl'>Review: </span>
+                    <p className="py-6 text-gray-600 text-justify"><span className='font-bold text-xl'>Review: </span>
                         {book.review}
                     </p>
-                    <div className='flex gap-4 items-center'>
+                    <div className='flex gap-4 items-center pb-4'>
 
                         <span>Tags </span>
                         {
@@ -34,28 +39,28 @@ const BookDetail = () => {
                         }
 
                     </div>
+                    <div className="divider"></div>
                     <div className='gap-14 flex items-center'>
-                        <p className='font-bold'>Number of Pages:</p>
-                        <p>{book.totalPages}</p>
+                        <p className='text-gray-600'>Number of Pages:</p>
+                        <p className='font-bold'>{book.totalPages}</p>
                     </div>
 
                     <div className='gap-28 flex items-center'>
-                        <p className='font-bold'>Publisher:</p>
-                        <p>{book.publisher}</p>
+                        <p className='text-gray-600'>Publisher:</p>
+                        <p className='font-bold'>{book.publisher}</p>
                     </div>
 
                     <div className='gap-12 flex items-center'>
-                        <p className='font-bold'>Year of Publishing:</p>
-                        <p>{book.yearOfPublishing}</p>
+                        <p className='text-gray-600'>Year of Publishing:</p>
+                        <p className='font-bold'>{book.yearOfPublishing}</p>
                     </div>
 
                     <div className='gap-32 flex items-center'>
-                        <p className='font-bold'>Rating:</p>
-                        <p>{book.rating}</p>
+                        <p className='text-gray-600'>Rating:</p>
+                        <p className='font-bold'>{book.rating}</p>
                     </div>
-                    <div className='flex-col md:flex-row pt-6'>
-                        <button className="btn btn-success mr-4 px-8 text-white">Read</button>
-                        <button className="btn btn-accent btn-outline">Wish List</button>
+                    <div className='pt-6'>
+                        <button onClick={() => handleRead(bookId)} className="btn btn-success mr-4 px-8  btn-outline">Read</button>
                     </div>
                 </div>
             </div>

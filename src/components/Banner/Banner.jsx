@@ -1,5 +1,6 @@
 import React from 'react';
 import bookImg from '../../assets/books.jpg'
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
@@ -11,10 +12,11 @@ const Banner = () => {
                 <div>
                     <h1 className="text-5xl font-bold text-wrap">Books to freshen up your bookshelf</h1>
                     <p className="py-6 w-2/3">
-                        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                        quasi. In deleniti eaque aut repudiandae et a id nisi.
+                    Reading books is like opening a door to endless worlds, where each page holds a new adventure. It nurtures the mind, enriches the soul, and ignites the imagination.
                     </p>
-                    <button className="btn bg-green-500 text-white">Get Started</button>
+                    <Link  to="/BookList">
+                    <button className="btn bg-green-500 text-white">See Book List</button>
+                    </Link>
                 </div>
             </div>
         </div>

@@ -17,7 +17,7 @@ const ReadList = ({ readBooks }) => {
                 <h1 className="text-4xl font-bold text-sky-800">{readBooks.bookName}</h1>
                 <p className='text-base pt-2 text-gray-800 font-semibold'>By: {readBooks.author}</p>
                 <div className="divider"></div>
-                <div className='flex gap-4 items-center pb-4'>
+                <div className='flex lg:flex-row flex-col gap-4 items-center pb-4'>
 
                     <span>Tags </span>
                     {

@@ -40,7 +40,7 @@ const NavBar = () => {
                         {link}
                     </ul>
                 </div>
-                <Link to="/">
+                <Link to="/" className="ms-6 lg:ms-0">
                     <a className=" text-3xl font-bold"><span className="text-sky-800">Boi</span><span className="text-green-600">Poka</span></a>
                 </Link>
             </div>

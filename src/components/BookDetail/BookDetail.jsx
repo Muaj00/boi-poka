@@ -17,18 +17,18 @@ const BookDetail = () => {
     return (
         <div className="hero min-h-screen">
             <div className="hero-content flex-col lg:flex-row">
-                <div className='bg-base-200 min-w-[550px] py-36 rounded-2xl'>
+                <div className='bg-base-200 min-w-[400px] lg:min-w-[550px] py-16 lg:py-36 rounded-2xl'>
                     <img
                         src={book.image}
-                        className="max-w-72 rounded-lg shadow-2xl  mx-auto" />
+                        className="max-w-44 lg:max-w-72 rounded-lg shadow-2xl  mx-auto" />
                 </div>
-                <div className='px-14 space-y-2'>
-                    <h1 className="text-5xl font-bold text-sky-800">{book.bookName}</h1>
+                <div className='px-14 space-y-2 text-start'>
+                    <h1 className="text-3xl lg:text-5xl font-bold text-sky-800">{book.bookName}</h1>
                     <p className='text-base pt-2 text-gray-800 font-semibold'>By: {book.author}</p>
                     <div className="divider"></div>
                     <h3 className='text-green-600 bg-sky-200 px-4 py-2 rounded-xl w-20'>{book.category}</h3>
                     <div className="divider"></div>
-                    <p className="py-6 text-gray-600 text-justify"><span className='font-bold text-xl'>Review: </span>
+                    <p className="py-6 text-gray-600 text-justify"><span className='font-bold lg:text-xl text-sm'>Review: </span>
                         {book.review}
                     </p>
                     <div className='flex gap-4 items-center pb-4'>

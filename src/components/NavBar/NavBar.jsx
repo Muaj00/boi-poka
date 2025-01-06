@@ -1,14 +1,20 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { toast } from "react-toastify";
 
 
 const NavBar = () => {
 
+    //nav links
     const link = <>
-
         <li ><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/BookList">Book List</NavLink></li>
         <li><NavLink to="/Dashboard">Dashboard</NavLink></li>
     </>
+
+    //handling an error button on navbar
+    const handleBuyNow = () => {
+        toast.error("Button is not functioning yet")
+    }
 
     return (
         <div className="navbar bg-base-100">
@@ -34,7 +40,9 @@ const NavBar = () => {
                         {link}
                     </ul>
                 </div>
-                <a className=" text-3xl font-bold"><span className="text-sky-800">Boi</span><span className="text-green-600">Poka</span></a>
+                <Link to="/">
+                    <a className=" text-3xl font-bold"><span className="text-sky-800">Boi</span><span className="text-green-600">Poka</span></a>
+                </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -42,7 +50,7 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn btn-outline btn-success">Buy Now</a>
+                <a className="btn btn-outline btn-success" onClick={handleBuyNow}>Buy Now</a>
             </div>
         </div>
     );

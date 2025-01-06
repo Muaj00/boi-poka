@@ -6,7 +6,8 @@ const Book = ({ book }) => {
 
     const { bookName, author, image, rating, bookId, tags, category } = book;
     return (
-        <div className="card bg-base-100 w-96 shadow-xl p-6">
+        //Daisy UI templates
+        <div className="card bg-base-100 w-96 shadow-xl p-6 border">
             <figure className='bg-gray-200 py-8'>
                 <img
                     src={image}
